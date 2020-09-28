@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Satisfy" />
+    <link rel="stylesheet" href="{% static 'sports/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="font-family: 'Satisfy',cursive;" class="navbar-brand" href="{% url 'index' %}">
+          <span aria-hidden="true"></span>&nbsp; SportsAcademy
+        </a>
+      </nav>
+    <div class="jumbotron">
+      <h1>WELCOME TO CHESS REPORTS</h1>
+</div>
+<div class="container"><ul style="list-style: none;">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">    
+        <li><div class="row">
+            <div class="col-sm-6"><b><h2>Game Number</h2></b></div>
+            <div class="col-sm-6"><b><h2>Winners Name</h2></b></div>
+            <hr>
+        </div></li>
+    {% for obj in objects_list %}
+        <li style="padding-bottom: 5px;"><div class="row">
+            <div class="col-sm-6"><b><h2>{{obj.Game_Number}}</h2></b></div>
+            <div class="col-sm-6"><b><h2>{{obj.winners_Name}}</h2></b></div>
+            <hr>
+        </div></li>
+        {% empty %}
+            <h2>No Records Available...</h2>
+    {% endfor %}
+    </div>
+    <div class="col-sm-2"></div>
+    </div>
+    </div>
+    
+</body>
+</html>

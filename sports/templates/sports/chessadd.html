@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Satisfy" />
+    <link rel="stylesheet" href="{% static 'sports/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'sports/css/chess.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="font-family: 'Satisfy',cursive;" class="navbar-brand" href="{% url 'index' %}">
+          <span aria-hidden="true"></span>&nbsp; SportsAcademy
+        </a>
+      </nav>
+    <div class="jumbotron">
+      <h1>WELCOME TO CHESS SECTION</h1>
+    </div>
+    <h1>Please fill the form below</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9">
+          <form action="{% url 'chessgame' %}" method="post"> 
+            {% csrf_token %}
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                {{ forms.Game_Number }}
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                {{ forms.Player1_Name }}
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                {{ forms.Player2_Name }}           
+            </div>
+            <div class="textbox">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              {{ forms.winners_Name }}           
+          </div>
+            <input style="background-color: white; color: crimson;" id="Sign in" class="btn" type="submit" name="" value="Submit">
+        </form>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+</body>
+</html>

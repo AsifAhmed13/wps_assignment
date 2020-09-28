@@ -1,0 +1,40 @@
+.btn {
+    width: 15%;
+    background-color: brown;
+    margin-left: 43%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+h3 {
+    text-align: center;
+    color: wheat;
+}
+
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid darkgreen;
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color:darkslategray;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}

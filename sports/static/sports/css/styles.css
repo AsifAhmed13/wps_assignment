@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+    color: wheat;
+}
+
+.btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+}
+
+h1{
+    text-align: center;
+    color: brown;
+    font-family: cursive,Arial, Helvetica, sans-serif;
+}

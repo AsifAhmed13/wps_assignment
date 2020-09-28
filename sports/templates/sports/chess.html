@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Satisfy" />
+    <link rel="stylesheet" href="{% static 'sports/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat+Alternates&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'sports/css/chess.css' %}">
+    <script>
+        function addGame(){
+            var url = window.location.href;
+            url+='/addgame';
+            window.location.href = url;
+        }
+
+        function eventReports(){
+            var url = window.location.href;
+            url+='/eventreports';
+            window.location.href = url;
+        }
+
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="font-family: 'Satisfy',cursive;" class="navbar-brand" href="{% url 'index' %}">
+            <span aria-hidden="true"></span>&nbsp; SportsAcademy
+        </a>              
+    </nav>
+    <div class="jumbotron">
+        <h1>WELCOME TO CHESS SECTION</h1>
+    </div>
+    <br>
+    <div>
+        <h1>
+            Please choose an option of your preference
+        </h1>
+        <br>
+        <div>
+            <button class="btn btn-primary" onclick="addGame()">Add Game</button>
+            <h3>OR</h3>
+            <button class="btn btn-primary" onclick="eventReports()">Event Reports</button>
+        </div>
+    </div>
+</body>
+</html>
